@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="main.js"></script>
+    <link rel="icon" type="image/x-icon" href="MU_LOGO.ico">
+    <title>Better SLCM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <a href='https://slcm.manipal.edu/'><img src ="https://manipal.pure.elsevier.com/skin/headerImage/" alt="Logo MAHE"></a>
+            </div>
+            <nav>
+                <ul id='MenuItems' style="position: sticky;">
+                    <li><a href='https://manipal.edu/mu.html'>Home</a></li>
+                    <li><a href='#'>About Us</a></li>
+                    <li><a href='#'>Services</a></li>
+                    <li><a href='#'>Contact</a></li>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id='login-form'class='login-page'>
+        <div class="form-box">
+            <div class='button-box'>
+                <div id='btn'></div>
+                <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+            </div>
+            <div id='login' class='input-group-login'>
+                <input type='text'class='input-field'placeholder='Email Id' required id="lemail">
+                <input type='password'class='input-field'placeholder='Enter Password' id="lpassword" required>
+                <input type='checkbox'class='check-box'><span>Remember Password</span>
+                <button type='submit'class='submit-btn' id="log">Log in</button>
+            </div>
+            <div id='register' class='input-group-register'>
+                <input type='text'class='input-field'placeholder='First Name' id="fname" required>
+                <input type='text'class='input-field'placeholder='Last Name ' id="lname" required>
+                <input type='text'class='input-field'placeholder='Registration Number ' id="regnum" required>
+                
+                <input type='email'class='input-field'placeholder='Email Id' id="email" required>
+                <input type='password'class='input-field'placeholder='Enter Password' id="password" required>
+                <input type='password'class='input-field'placeholder='Confirm Password'  id="confpassword" required><br><br>
+                <select name="campus" id="campus-select">
+                    <option value="">--Select Campus--</option>
+                    <option value="Kasturba Medical College (KMC)">Kasturba Medical College (KMC)</option>
+                    <option value="Centre for Integrative Medicine & Research (CIMR)">Centre for Integrative Medicine & Research (CIMR)</option>
+                    <option value="Manipal College of Dental Sciences (MCODS">Manipal College of Dental Sciences (MCODS</option>
+                    <option value="Manipal College of Pharmaceutical Sciences (MCOPS)">Manipal College of Pharmaceutical Sciences (MCOPS)</option>
+                    <option value="Manipal College of Health Professions (MCHP)">Manipal College of Health Professions (MCHP)</option>
+                    <option value="Manipal College of Nursing (MCON)">Manipal College of Nursing (MCON)</option>
+                    <option value="Manipal School of Life Sciences (MSLS)">Manipal School of Life Sciences (MSLS)</option>
+                    <option value="Prasanna School of Public Health (PSPH)">Prasanna School of Public Health (PSPH)</option>
+                    <option value="Manipal Institute of Virology (MIV)">Manipal Institute of Virology (MIV)</option>
+                    <option value="Manipal Institute of Regenerative Medicine (MIRM)">Manipal Institute of Regenerative Medicine (MIRM)</option>
+                    <option value="Manipal Institute of Technology (MIT)">Manipal Institute of Technology (MIT)</option>
+                    <option value="Dept of Sciences (DSc)">Dept of Sciences (DSc)</option>
+                    <option value="Manipal School of Information Sciences (MSIS)">Manipal School of Information Sciences (MSIS)</option>
+                    <option value="Manipal School of Architecture & Planning (MSAP)">Manipal School of Architecture & Planning (MSAP)</option>
+                    <option value="Dept of Design (DOD)">Dept of Design (DOD)</option>
+                    <option value="Manipal Institute of Management (MIM)">Manipal Institute of Management (MIM)</option>
+                    <option value="Dept of Commerce (DOC)">Dept of Commerce (DOC)</option>
+                    <option value="Dept of Atomic & Molecular Physics (DAMP)">Dept of Atomic & Molecular Physics (DAMP)</option>
+                    <option value="Welcomgroup Graduate School of Hotel Administration (WGSHA)">Welcomgroup Graduate School of Hotel Administration (WGSHA)</option>
+                    <option value="Manipal School of Natural Sciences (MCNS)">Manipal School of Natural Sciences (MCNS)</option>
+                    <option value="Manipal Institute of Communication (MIC)">Manipal Institute of Communication (MIC)</option>
+                    <option value="Manipal Centre for Humanities (MCH)">Manipal Centre for Humanities (MCH)</option>
+                    <option value="Manipal Centre for European Studies (MCES)">Manipal Centre for European Studies (MCES)</option>
+                    <option value="Dept of Languages (DOL)">Dept of Languages (DOL)</option>
+                    <option value="Dept of Philosophy (DOP)">Dept of Philosophy (DOP)</option>
+                    <option value="Dept of Geopolitics & International Relations (DGIR)">Dept of Geopolitics & International Relations (DGIR)</option>
+                    <option value="Gandhian Centre for Philosophical Arts & Sciences (GCPAS)">Gandhian Centre for Philosophical Arts & Sciences (GCPAS)</option>
+                    <option value="Dept of Library & Information Sciences (DLIS)">Dept of Library & Information Sciences (DLIS)</option>
+                </select>
+                <input type='checkbox'class='check-box' id="tnc"><span>I agree to the terms and conditions</span>
+                <button type='submit'class='submit-btn' id="reg">Register</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var x=document.getElementById('login');
+    var y=document.getElementById('register');
+    var z=document.getElementById('btn');
+    function register()
+    {
+        x.style.left='-400px';
+        y.style.left='50px';
+        z.style.left='110px';
+    }
+    function login()
+    {
+        x.style.left='50px';
+        y.style.left='450px';
+        z.style.left='0px';
+    }
+    var modal = document.getElementById('login-form');
+    window.onclick = function(event) 
+    {
+        if (event.target == modal) 
+        {
+            modal.style.display = "none";
+        }
+    }
+</script>
+        
+</body>
+</html>
